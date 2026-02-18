@@ -66,7 +66,8 @@ namespace Game.Scripts.LiveObjects
                 LiftControls();
                 CalcutateMovement();
                 //if (Input.GetKeyDown(KeyCode.Escape))
-                if (Keyboard.current.escapeKey.wasPressedThisFrame || (Gamepad.current != null && Gamepad.current.buttonSouth.wasPressedThisFrame))
+                //if (Keyboard.current.escapeKey.wasPressedThisFrame || (Gamepad.current != null && Gamepad.current.buttonSouth.wasPressedThisFrame))
+                if (_newInputControl.Forklift.Exit.WasPressedThisFrame())
                     ExitDriveMode();
             }
         }
@@ -111,10 +112,12 @@ namespace Game.Scripts.LiveObjects
         private void LiftControls()
         {
             //if (Input.GetKey(KeyCode.R))
-            if (Keyboard.current.rKey.isPressed || (Gamepad.current != null && Gamepad.current.buttonWest.wasPressedThisFrame))
+            //if (Keyboard.current.rKey.isPressed || (Gamepad.current != null && Gamepad.current.buttonWest.wasPressedThisFrame))
+            if (_newInputControl.Forklift.LiftUp.IsPressed())
                 LiftUpRoutine();
             //else if (Input.GetKey(KeyCode.T))
-            else if (Keyboard.current.tKey.isPressed || (Gamepad.current != null && Gamepad.current.buttonEast.wasPressedThisFrame))
+            //else if (Keyboard.current.tKey.isPressed || (Gamepad.current != null && Gamepad.current.buttonEast.wasPressedThisFrame))
+            if (_newInputControl.Forklift.LiftDown.IsPressed())
                 LiftDownRoutine();
         }
 

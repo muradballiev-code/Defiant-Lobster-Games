@@ -5,6 +5,7 @@ using UnityEngine;
 using Cinemachine;
 using Game.Scripts.UI;
 using UnityEngine.InputSystem;
+using Unity.VisualScripting;
 
 namespace Game.Scripts.LiveObjects
 {
@@ -32,12 +33,12 @@ namespace Game.Scripts.LiveObjects
         public static event Action onExitFlightmode;
 
         //Reference to New InputSystem Action Map
-        private Player_Controls _dronControls;
+        private Player_Controls _newInputControl;
 
         private void Start()
         {
-            _dronControls = new Player_Controls();
-            _dronControls.Drone.Enable();
+            _newInputControl = new Player_Controls();
+            _newInputControl.Drone.Enable();
         }
 
         private void OnEnable()
@@ -74,7 +75,8 @@ namespace Game.Scripts.LiveObjects
                 CalculateMovementUpdate();
 
                 //if (Input.GetKeyDown(KeyCode.Escape))
-                if (Keyboard.current.escapeKey.wasPressedThisFrame || (Gamepad.current != null && Gamepad.current.buttonSouth.wasPressedThisFrame))
+                //if (Keyboard.current.escapeKey.wasPressedThisFrame || (Gamepad.current != null && Gamepad.current.buttonSouth.wasPressedThisFrame))
+                if (_newInputControl.Drone.Exit.WasPressedThisFrame())
                 {
                     _inFlightMode = false;
                     onExitFlightmode?.Invoke();
@@ -94,10 +96,31 @@ namespace Game.Scripts.LiveObjects
         private void CalculateMovementUpdate()
         {
             //New InputSystem
-            var rotateDirection = _dronControls.Drone.Rotate.ReadValue<float>();
+            var rotateDirection = _newInputControl.Drone.Rotate.ReadValue<float>();
 
-            transform.Rotate(Vector3.up * Time.deltaTime * _speed * rotateDirection);
+            if (Mathf.Abs(rotateDirection) > 0.01f)
+            {
+                float rotationSpeed = _speed / 3f * Time.deltaTime;
+                transform.Rotate(Vector3.up * rotateDirection * rotationSpeed * 100f);
+            }
 
+            /*
+            if (rotateDirection < -0.01)
+            {
+                var tempRot = transform.localRotation.eulerAngles;
+
+                Debug.Log(tempRot);
+
+                tempRot.y -= _speed / 3;
+                transform.localRotation = Quaternion.Euler(tempRot);
+            }
+            if (rotateDirection > 0.01)
+            {
+                var tempRot = transform.localRotation.eulerAngles;
+                tempRot.y += _speed / 3;
+                transform.localRotation = Quaternion.Euler(tempRot);
+            }
+            */
             /*
             //Old InputSystem
             if (Input.GetKey(KeyCode.LeftArrow))
@@ -121,12 +144,14 @@ namespace Game.Scripts.LiveObjects
         private void CalculateMovementFixedUpdate()
         {
             //if (Input.GetKey(KeyCode.Space))
-            if (Keyboard.current.spaceKey.isPressed || (Gamepad.current != null && Gamepad.current.buttonWest.wasPressedThisFrame))
+            //if (Keyboard.current.spaceKey.isPressed || (Gamepad.current != null && Gamepad.current.buttonWest.wasPressedThisFrame))
+            if (_newInputControl.Drone.Up.IsPressed())
             {
                 _rigidbody.AddForce(transform.up * _speed, ForceMode.Acceleration);
             }
             //if (Input.GetKey(KeyCode.V))
-            if (Keyboard.current.vKey.isPressed || (Gamepad.current != null && Gamepad.current.buttonEast.wasPressedThisFrame))
+            //if (Keyboard.current.vKey.isPressed || (Gamepad.current != null && Gamepad.current.buttonEast.wasPressedThisFrame))
+            if (_newInputControl.Drone.Down.IsPressed())
             {
                 _rigidbody.AddForce(-transform.up * _speed, ForceMode.Acceleration);
             }
@@ -135,7 +160,7 @@ namespace Game.Scripts.LiveObjects
         private void CalculateTilt()
         {
             //New InputSystem
-            var droneRotate = _dronControls.Drone.Flight.ReadValue<Vector2>();
+            var droneRotate = _newInputControl.Drone.Flight.ReadValue<Vector2>();
 
             float maxTilt = 30f;
             float pitch = 0f;

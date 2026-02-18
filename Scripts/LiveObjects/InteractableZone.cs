@@ -40,18 +40,23 @@ namespace Game.Scripts.LiveObjects
         private bool _actionPerformed = false;
         [SerializeField]
         private Sprite _inventoryIcon;
+       
         /*
         [SerializeField]
         private KeyCode _zoneKeyInput;
         */
+        
         [SerializeField]
         private Key _newZoneKeyInput;
         [SerializeField]
         private GamepadButton _gamepadZoneButton;
+        
         [SerializeField]
         private KeyState _keyState;
         [SerializeField]
         private GameObject _marker;
+
+        
 
         private bool _inHoldState = false;
 
@@ -72,14 +77,32 @@ namespace Game.Scripts.LiveObjects
         public static event Action<int> onHoldStarted;
         public static event Action<int> onHoldEnded;
 
+        //Reference to New InputSystem Action Map and to Component
+        [SerializeField]
+        private InputActionReference _interactActionReference;
+        private InputAction _currentInteractAction;
+        private Player_Controls _newInputControl;
+
         private void OnEnable()
         {
             InteractableZone.onZoneInteractionComplete += SetMarker;
+        }
 
+        private void Start()
+        {
+            if (_interactActionReference == null || _interactActionReference.action == null)
+            {
+                Debug.LogError("Не назначено действие в _interactReference!", this);
+                return;
+            }
+            _currentInteractAction = _interactActionReference.action;
+            _currentInteractAction.Enable();
         }
 
         private void OnTriggerEnter(Collider other)
         {
+            string binding = _currentInteractAction.GetBindingDisplayString();
+
             if (other.CompareTag("Player") && _currentZoneID > _requiredID)
             {
                 switch (_zoneType)
@@ -90,7 +113,8 @@ namespace Game.Scripts.LiveObjects
                             _inZone = true;
                             if (_displayMessage != null)
                             {
-                                string message = $"Press the {_newZoneKeyInput.ToString()} key to {_displayMessage}.";
+                                //string message = $"Press the {_newZoneKeyInput.ToString()} key to {_displayMessage}.";
+                                string message = $"Press the {binding} key to {_displayMessage}.";
                                 UIManager.Instance.DisplayInteractableZoneMessage(true, message);
                             }
                             else
@@ -131,7 +155,8 @@ namespace Game.Scripts.LiveObjects
             if (_inZone == true)
             {
                 //if (Input.GetKeyDown(_zoneKeyInput) && _keyState != KeyState.PressHold)
-                if ((Keyboard.current[_newZoneKeyInput].wasPressedThisFrame || (Gamepad.current != null && Gamepad.current[_gamepadZoneButton].wasPressedThisFrame)) && _keyState != KeyState.PressHold)
+                //if ((Keyboard.current[_newZoneKeyInput].wasPressedThisFrame || (Gamepad.current != null && Gamepad.current[_gamepadZoneButton].wasPressedThisFrame)) && _keyState != KeyState.PressHold)
+                if (_currentInteractAction.WasPressedThisFrame() && _keyState != KeyState.PressHold)
                 {
                     //press
                     switch (_zoneType)
@@ -157,6 +182,7 @@ namespace Game.Scripts.LiveObjects
                 }
                 //else if (Input.GetKey(_zoneKeyInput) && _keyState == KeyState.PressHold && _inHoldState == false)
                 else if ((Keyboard.current[_newZoneKeyInput].isPressed || (Gamepad.current != null && Gamepad.current[_gamepadZoneButton].isPressed)) && _keyState == KeyState.PressHold && _inHoldState == false)
+                //else if (_newInputControl.General.Use.IsPressed() && _keyState == KeyState.PressHold && _inHoldState == false)
                 {
                     _inHoldState = true;
 
@@ -169,6 +195,7 @@ namespace Game.Scripts.LiveObjects
                 }
                 //if (Input.GetKeyUp(_zoneKeyInput) && _keyState == KeyState.PressHold)
                 if ((Keyboard.current[_newZoneKeyInput].wasReleasedThisFrame || (Gamepad.current != null && Gamepad.current[_gamepadZoneButton].wasReleasedThisFrame)) && _keyState == KeyState.PressHold)
+                //if (_newInputControl.General.Explode.WasReleasedThisFrame() && _keyState == KeyState.PressHold)
                 {
                     _inHoldState = false;
                     onHoldEnded?.Invoke(_zoneID);

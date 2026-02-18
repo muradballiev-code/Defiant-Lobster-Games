@@ -24,10 +24,18 @@ namespace Game.Scripts.LiveObjects
         public static event Action onHackComplete;
         public static event Action onHackEnded;
 
+        private Player_Controls _newInputControl;
+
         private void OnEnable()
         {
             InteractableZone.onHoldStarted += InteractableZone_onHoldStarted;
             InteractableZone.onHoldEnded += InteractableZone_onHoldEnded;
+        }
+
+        private void Start()
+        {
+            _newInputControl = new Player_Controls();
+            _newInputControl.Laptop.Enable();
         }
 
         private void Update()
@@ -36,7 +44,8 @@ namespace Game.Scripts.LiveObjects
             {
                 //Switch between Cameras by New InputSystem
                 //if (Input.GetKeyDown(KeyCode.E))
-                if (Keyboard.current.eKey.wasPressedThisFrame || (Gamepad.current != null && Gamepad.current.buttonWest.wasPressedThisFrame))
+                //if (Keyboard.current.eKey.wasPressedThisFrame || (Gamepad.current != null && Gamepad.current.buttonWest.wasPressedThisFrame))
+                if (_newInputControl.Laptop.CameraActive.WasPressedThisFrame())
                 {
                     var previous = _activeCamera;
                     _activeCamera++;
@@ -51,7 +60,8 @@ namespace Game.Scripts.LiveObjects
                 }
 
                 //if (Input.GetKeyDown(KeyCode.Escape))
-                if (Keyboard.current.escapeKey.wasPressedThisFrame || (Gamepad.current != null && Gamepad.current.buttonSouth.wasPressedThisFrame))
+                //if (Keyboard.current.escapeKey.wasPressedThisFrame || (Gamepad.current != null && Gamepad.current.buttonSouth.wasPressedThisFrame))
+                if (_newInputControl.Laptop.CameraDisactivate.WasPressedThisFrame())
                 {
                     _hacked = false;
                     onHackEnded?.Invoke();

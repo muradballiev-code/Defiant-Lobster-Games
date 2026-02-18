@@ -135,6 +135,17 @@ public partial class @Player_Controls: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
+                    ""id"": ""528a58fd-f911-47a2-a353-137eb9f1212f"",
+                    ""path"": ""<Gamepad>/buttonEast"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Punch"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""433e4c3c-2348-4c9d-a367-cb1d186b855b"",
                     ""path"": ""<Gamepad>/rightStick"",
                     ""interactions"": """",
@@ -176,6 +187,33 @@ public partial class @Player_Controls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Up"",
+                    ""type"": ""Button"",
+                    ""id"": ""3a8e2eaa-0547-4964-9b04-121cd54dc833"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Down"",
+                    ""type"": ""Button"",
+                    ""id"": ""3aa81bc8-8d98-4545-83ac-363a12223eb4"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Exit"",
+                    ""type"": ""Button"",
+                    ""id"": ""48790c90-51d5-4da9-a757-cd3bb891c245"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -288,6 +326,72 @@ public partial class @Player_Controls: IInputActionCollection2, IDisposable
                     ""action"": ""RotateGamepad"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""578e822a-fc7b-4bb5-a1a5-526b0500a52c"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Up"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""810e99c1-5ae8-4295-b568-9dbe696f0f30"",
+                    ""path"": ""<Gamepad>/leftShoulder"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Up"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""7a28f72c-9fb5-4835-95ab-40559c0a0695"",
+                    ""path"": ""<Keyboard>/v"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Down"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""0a41d25e-f029-4ef5-999e-17daf0639ea4"",
+                    ""path"": ""<Gamepad>/rightShoulder"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Down"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""ea40606c-0cf6-456b-8dd3-c3f38f3f34ac"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Exit"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""6e231717-866b-4f56-af0f-566dd8f9e237"",
+                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Exit"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -312,6 +416,33 @@ public partial class @Player_Controls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Exit"",
+                    ""type"": ""Button"",
+                    ""id"": ""e15b0115-ce1f-4e66-b499-633314a7771a"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""LiftUp"",
+                    ""type"": ""Button"",
+                    ""id"": ""6717753c-a1d0-4182-8115-7d9e590cbbef"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""LiftDown"",
+                    ""type"": ""Button"",
+                    ""id"": ""4462d592-569d-4ab4-8c37-53fd96d67881"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -391,6 +522,243 @@ public partial class @Player_Controls: IInputActionCollection2, IDisposable
                     ""action"": ""LookGamepad"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f544174d-e239-45f7-81f8-cb938f29e095"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Exit"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""5cf80ce3-daf4-4193-a942-94142359b977"",
+                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Exit"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""6c0abd7d-b17d-4131-a320-0a32789efcc0"",
+                    ""path"": ""<Keyboard>/r"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""LiftUp"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d3b8d951-d58a-457b-9cec-0f98387cf84b"",
+                    ""path"": ""<Gamepad>/leftShoulder"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""LiftUp"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""195c7a7b-c455-4609-99a5-95843a6e3e6c"",
+                    ""path"": ""<Keyboard>/t"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""LiftDown"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""15ca4fe8-a75a-48ab-837b-c5aaea20a5d2"",
+                    ""path"": ""<Gamepad>/rightShoulder"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""LiftDown"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
+        },
+        {
+            ""name"": ""General"",
+            ""id"": ""d985528f-0d3f-41f9-b50f-8fdb693bc344"",
+            ""actions"": [
+                {
+                    ""name"": ""Use"",
+                    ""type"": ""Button"",
+                    ""id"": ""b48ac786-70ad-4c80-9798-b2dcf99f80fb"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Explode"",
+                    ""type"": ""Button"",
+                    ""id"": ""a7b228a7-b26f-4cf2-9812-f75ff88f672c"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Exit"",
+                    ""type"": ""Button"",
+                    ""id"": ""ec6757a9-1eaf-48a0-80ad-3b015c20a949"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""c30c11e1-1ad5-4a8d-aad5-c1fa46a94668"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Use"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c534cc2c-c593-48bd-a219-ca34cd7fc03b"",
+                    ""path"": ""<Gamepad>/buttonWest"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Use"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""5ea7d1d8-6e6a-42b4-ad27-4bac4034316b"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Explode"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""86dd963d-7e92-4887-bfc5-ba3a2eb212a7"",
+                    ""path"": ""<Gamepad>/buttonEast"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Explode"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""4eefacca-8a33-49d7-9c6a-e1882af366b3"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Exit"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d90ec3aa-4f81-48bd-ac7e-8c74111330d4"",
+                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Exit"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
+        },
+        {
+            ""name"": ""Laptop"",
+            ""id"": ""60203490-9b87-40dc-8f35-78c6218824c9"",
+            ""actions"": [
+                {
+                    ""name"": ""CameraActive"",
+                    ""type"": ""Button"",
+                    ""id"": ""a65921fe-b9db-4633-a716-7bc87524d147"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""CameraDisactivate"",
+                    ""type"": ""Button"",
+                    ""id"": ""ab6c6ca9-9c8a-49a4-bd38-5a69c19b3e4b"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""6f971d2e-738e-49ac-ab63-0392ac0f7e76"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""CameraActive"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""9b3f913d-3181-4a96-965b-731e9f6c2386"",
+                    ""path"": ""<Gamepad>/buttonWest"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""CameraActive"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""be3fa0ce-52df-41e8-b9d7-9b73c09891b9"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""CameraDisactivate"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e8cbe2c5-3764-4325-ab9b-0070ff24d962"",
+                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""CameraDisactivate"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -407,10 +775,25 @@ public partial class @Player_Controls: IInputActionCollection2, IDisposable
         m_Drone_Flight = m_Drone.FindAction("Flight", throwIfNotFound: true);
         m_Drone_Rotate = m_Drone.FindAction("Rotate", throwIfNotFound: true);
         m_Drone_RotateGamepad = m_Drone.FindAction("RotateGamepad", throwIfNotFound: true);
+        m_Drone_Up = m_Drone.FindAction("Up", throwIfNotFound: true);
+        m_Drone_Down = m_Drone.FindAction("Down", throwIfNotFound: true);
+        m_Drone_Exit = m_Drone.FindAction("Exit", throwIfNotFound: true);
         // Forklift
         m_Forklift = asset.FindActionMap("Forklift", throwIfNotFound: true);
         m_Forklift_Drive = m_Forklift.FindAction("Drive", throwIfNotFound: true);
         m_Forklift_LookGamepad = m_Forklift.FindAction("LookGamepad", throwIfNotFound: true);
+        m_Forklift_Exit = m_Forklift.FindAction("Exit", throwIfNotFound: true);
+        m_Forklift_LiftUp = m_Forklift.FindAction("LiftUp", throwIfNotFound: true);
+        m_Forklift_LiftDown = m_Forklift.FindAction("LiftDown", throwIfNotFound: true);
+        // General
+        m_General = asset.FindActionMap("General", throwIfNotFound: true);
+        m_General_Use = m_General.FindAction("Use", throwIfNotFound: true);
+        m_General_Explode = m_General.FindAction("Explode", throwIfNotFound: true);
+        m_General_Exit = m_General.FindAction("Exit", throwIfNotFound: true);
+        // Laptop
+        m_Laptop = asset.FindActionMap("Laptop", throwIfNotFound: true);
+        m_Laptop_CameraActive = m_Laptop.FindAction("CameraActive", throwIfNotFound: true);
+        m_Laptop_CameraDisactivate = m_Laptop.FindAction("CameraDisactivate", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -537,6 +920,9 @@ public partial class @Player_Controls: IInputActionCollection2, IDisposable
     private readonly InputAction m_Drone_Flight;
     private readonly InputAction m_Drone_Rotate;
     private readonly InputAction m_Drone_RotateGamepad;
+    private readonly InputAction m_Drone_Up;
+    private readonly InputAction m_Drone_Down;
+    private readonly InputAction m_Drone_Exit;
     public struct DroneActions
     {
         private @Player_Controls m_Wrapper;
@@ -544,6 +930,9 @@ public partial class @Player_Controls: IInputActionCollection2, IDisposable
         public InputAction @Flight => m_Wrapper.m_Drone_Flight;
         public InputAction @Rotate => m_Wrapper.m_Drone_Rotate;
         public InputAction @RotateGamepad => m_Wrapper.m_Drone_RotateGamepad;
+        public InputAction @Up => m_Wrapper.m_Drone_Up;
+        public InputAction @Down => m_Wrapper.m_Drone_Down;
+        public InputAction @Exit => m_Wrapper.m_Drone_Exit;
         public InputActionMap Get() { return m_Wrapper.m_Drone; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -562,6 +951,15 @@ public partial class @Player_Controls: IInputActionCollection2, IDisposable
             @RotateGamepad.started += instance.OnRotateGamepad;
             @RotateGamepad.performed += instance.OnRotateGamepad;
             @RotateGamepad.canceled += instance.OnRotateGamepad;
+            @Up.started += instance.OnUp;
+            @Up.performed += instance.OnUp;
+            @Up.canceled += instance.OnUp;
+            @Down.started += instance.OnDown;
+            @Down.performed += instance.OnDown;
+            @Down.canceled += instance.OnDown;
+            @Exit.started += instance.OnExit;
+            @Exit.performed += instance.OnExit;
+            @Exit.canceled += instance.OnExit;
         }
 
         private void UnregisterCallbacks(IDroneActions instance)
@@ -575,6 +973,15 @@ public partial class @Player_Controls: IInputActionCollection2, IDisposable
             @RotateGamepad.started -= instance.OnRotateGamepad;
             @RotateGamepad.performed -= instance.OnRotateGamepad;
             @RotateGamepad.canceled -= instance.OnRotateGamepad;
+            @Up.started -= instance.OnUp;
+            @Up.performed -= instance.OnUp;
+            @Up.canceled -= instance.OnUp;
+            @Down.started -= instance.OnDown;
+            @Down.performed -= instance.OnDown;
+            @Down.canceled -= instance.OnDown;
+            @Exit.started -= instance.OnExit;
+            @Exit.performed -= instance.OnExit;
+            @Exit.canceled -= instance.OnExit;
         }
 
         public void RemoveCallbacks(IDroneActions instance)
@@ -598,12 +1005,18 @@ public partial class @Player_Controls: IInputActionCollection2, IDisposable
     private List<IForkliftActions> m_ForkliftActionsCallbackInterfaces = new List<IForkliftActions>();
     private readonly InputAction m_Forklift_Drive;
     private readonly InputAction m_Forklift_LookGamepad;
+    private readonly InputAction m_Forklift_Exit;
+    private readonly InputAction m_Forklift_LiftUp;
+    private readonly InputAction m_Forklift_LiftDown;
     public struct ForkliftActions
     {
         private @Player_Controls m_Wrapper;
         public ForkliftActions(@Player_Controls wrapper) { m_Wrapper = wrapper; }
         public InputAction @Drive => m_Wrapper.m_Forklift_Drive;
         public InputAction @LookGamepad => m_Wrapper.m_Forklift_LookGamepad;
+        public InputAction @Exit => m_Wrapper.m_Forklift_Exit;
+        public InputAction @LiftUp => m_Wrapper.m_Forklift_LiftUp;
+        public InputAction @LiftDown => m_Wrapper.m_Forklift_LiftDown;
         public InputActionMap Get() { return m_Wrapper.m_Forklift; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -619,6 +1032,15 @@ public partial class @Player_Controls: IInputActionCollection2, IDisposable
             @LookGamepad.started += instance.OnLookGamepad;
             @LookGamepad.performed += instance.OnLookGamepad;
             @LookGamepad.canceled += instance.OnLookGamepad;
+            @Exit.started += instance.OnExit;
+            @Exit.performed += instance.OnExit;
+            @Exit.canceled += instance.OnExit;
+            @LiftUp.started += instance.OnLiftUp;
+            @LiftUp.performed += instance.OnLiftUp;
+            @LiftUp.canceled += instance.OnLiftUp;
+            @LiftDown.started += instance.OnLiftDown;
+            @LiftDown.performed += instance.OnLiftDown;
+            @LiftDown.canceled += instance.OnLiftDown;
         }
 
         private void UnregisterCallbacks(IForkliftActions instance)
@@ -629,6 +1051,15 @@ public partial class @Player_Controls: IInputActionCollection2, IDisposable
             @LookGamepad.started -= instance.OnLookGamepad;
             @LookGamepad.performed -= instance.OnLookGamepad;
             @LookGamepad.canceled -= instance.OnLookGamepad;
+            @Exit.started -= instance.OnExit;
+            @Exit.performed -= instance.OnExit;
+            @Exit.canceled -= instance.OnExit;
+            @LiftUp.started -= instance.OnLiftUp;
+            @LiftUp.performed -= instance.OnLiftUp;
+            @LiftUp.canceled -= instance.OnLiftUp;
+            @LiftDown.started -= instance.OnLiftDown;
+            @LiftDown.performed -= instance.OnLiftDown;
+            @LiftDown.canceled -= instance.OnLiftDown;
         }
 
         public void RemoveCallbacks(IForkliftActions instance)
@@ -646,6 +1077,122 @@ public partial class @Player_Controls: IInputActionCollection2, IDisposable
         }
     }
     public ForkliftActions @Forklift => new ForkliftActions(this);
+
+    // General
+    private readonly InputActionMap m_General;
+    private List<IGeneralActions> m_GeneralActionsCallbackInterfaces = new List<IGeneralActions>();
+    private readonly InputAction m_General_Use;
+    private readonly InputAction m_General_Explode;
+    private readonly InputAction m_General_Exit;
+    public struct GeneralActions
+    {
+        private @Player_Controls m_Wrapper;
+        public GeneralActions(@Player_Controls wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Use => m_Wrapper.m_General_Use;
+        public InputAction @Explode => m_Wrapper.m_General_Explode;
+        public InputAction @Exit => m_Wrapper.m_General_Exit;
+        public InputActionMap Get() { return m_Wrapper.m_General; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(GeneralActions set) { return set.Get(); }
+        public void AddCallbacks(IGeneralActions instance)
+        {
+            if (instance == null || m_Wrapper.m_GeneralActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_GeneralActionsCallbackInterfaces.Add(instance);
+            @Use.started += instance.OnUse;
+            @Use.performed += instance.OnUse;
+            @Use.canceled += instance.OnUse;
+            @Explode.started += instance.OnExplode;
+            @Explode.performed += instance.OnExplode;
+            @Explode.canceled += instance.OnExplode;
+            @Exit.started += instance.OnExit;
+            @Exit.performed += instance.OnExit;
+            @Exit.canceled += instance.OnExit;
+        }
+
+        private void UnregisterCallbacks(IGeneralActions instance)
+        {
+            @Use.started -= instance.OnUse;
+            @Use.performed -= instance.OnUse;
+            @Use.canceled -= instance.OnUse;
+            @Explode.started -= instance.OnExplode;
+            @Explode.performed -= instance.OnExplode;
+            @Explode.canceled -= instance.OnExplode;
+            @Exit.started -= instance.OnExit;
+            @Exit.performed -= instance.OnExit;
+            @Exit.canceled -= instance.OnExit;
+        }
+
+        public void RemoveCallbacks(IGeneralActions instance)
+        {
+            if (m_Wrapper.m_GeneralActionsCallbackInterfaces.Remove(instance))
+                UnregisterCallbacks(instance);
+        }
+
+        public void SetCallbacks(IGeneralActions instance)
+        {
+            foreach (var item in m_Wrapper.m_GeneralActionsCallbackInterfaces)
+                UnregisterCallbacks(item);
+            m_Wrapper.m_GeneralActionsCallbackInterfaces.Clear();
+            AddCallbacks(instance);
+        }
+    }
+    public GeneralActions @General => new GeneralActions(this);
+
+    // Laptop
+    private readonly InputActionMap m_Laptop;
+    private List<ILaptopActions> m_LaptopActionsCallbackInterfaces = new List<ILaptopActions>();
+    private readonly InputAction m_Laptop_CameraActive;
+    private readonly InputAction m_Laptop_CameraDisactivate;
+    public struct LaptopActions
+    {
+        private @Player_Controls m_Wrapper;
+        public LaptopActions(@Player_Controls wrapper) { m_Wrapper = wrapper; }
+        public InputAction @CameraActive => m_Wrapper.m_Laptop_CameraActive;
+        public InputAction @CameraDisactivate => m_Wrapper.m_Laptop_CameraDisactivate;
+        public InputActionMap Get() { return m_Wrapper.m_Laptop; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(LaptopActions set) { return set.Get(); }
+        public void AddCallbacks(ILaptopActions instance)
+        {
+            if (instance == null || m_Wrapper.m_LaptopActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_LaptopActionsCallbackInterfaces.Add(instance);
+            @CameraActive.started += instance.OnCameraActive;
+            @CameraActive.performed += instance.OnCameraActive;
+            @CameraActive.canceled += instance.OnCameraActive;
+            @CameraDisactivate.started += instance.OnCameraDisactivate;
+            @CameraDisactivate.performed += instance.OnCameraDisactivate;
+            @CameraDisactivate.canceled += instance.OnCameraDisactivate;
+        }
+
+        private void UnregisterCallbacks(ILaptopActions instance)
+        {
+            @CameraActive.started -= instance.OnCameraActive;
+            @CameraActive.performed -= instance.OnCameraActive;
+            @CameraActive.canceled -= instance.OnCameraActive;
+            @CameraDisactivate.started -= instance.OnCameraDisactivate;
+            @CameraDisactivate.performed -= instance.OnCameraDisactivate;
+            @CameraDisactivate.canceled -= instance.OnCameraDisactivate;
+        }
+
+        public void RemoveCallbacks(ILaptopActions instance)
+        {
+            if (m_Wrapper.m_LaptopActionsCallbackInterfaces.Remove(instance))
+                UnregisterCallbacks(instance);
+        }
+
+        public void SetCallbacks(ILaptopActions instance)
+        {
+            foreach (var item in m_Wrapper.m_LaptopActionsCallbackInterfaces)
+                UnregisterCallbacks(item);
+            m_Wrapper.m_LaptopActionsCallbackInterfaces.Clear();
+            AddCallbacks(instance);
+        }
+    }
+    public LaptopActions @Laptop => new LaptopActions(this);
     public interface IPlayerActions
     {
         void OnWalk(InputAction.CallbackContext context);
@@ -657,10 +1204,27 @@ public partial class @Player_Controls: IInputActionCollection2, IDisposable
         void OnFlight(InputAction.CallbackContext context);
         void OnRotate(InputAction.CallbackContext context);
         void OnRotateGamepad(InputAction.CallbackContext context);
+        void OnUp(InputAction.CallbackContext context);
+        void OnDown(InputAction.CallbackContext context);
+        void OnExit(InputAction.CallbackContext context);
     }
     public interface IForkliftActions
     {
         void OnDrive(InputAction.CallbackContext context);
         void OnLookGamepad(InputAction.CallbackContext context);
+        void OnExit(InputAction.CallbackContext context);
+        void OnLiftUp(InputAction.CallbackContext context);
+        void OnLiftDown(InputAction.CallbackContext context);
+    }
+    public interface IGeneralActions
+    {
+        void OnUse(InputAction.CallbackContext context);
+        void OnExplode(InputAction.CallbackContext context);
+        void OnExit(InputAction.CallbackContext context);
+    }
+    public interface ILaptopActions
+    {
+        void OnCameraActive(InputAction.CallbackContext context);
+        void OnCameraDisactivate(InputAction.CallbackContext context);
     }
 }
